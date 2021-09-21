@@ -5,7 +5,6 @@ struct mystr
 {
     char* str;
     int length;
-
+    int number;
 };
 void file_strings(char* mem, int size_, mystr* index);
-void sorting_func (mystr* index, int strings_sum);

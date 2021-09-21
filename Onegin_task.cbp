@@ -36,6 +36,7 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="parsing_strings.cpp" />
 		<Unit filename="sort_functions.h" />
+		<Unit filename="sorting_func.cpp" />
 		<Extensions>
 			<DoxyBlocks>
 				<comment_style block="1" line="1" />
