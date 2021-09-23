@@ -22,7 +22,7 @@ int main()
 
 
 
-    size_spec = fread(mem, sizeof(char), size_f-1, fp);    // кидает файл в буфер, получает количество символов
+    size_spec = fread(mem, sizeof(char), size_f, fp);    // кидает файл в буфер, получает количество символов
 
     mystr* index = (mystr*)calloc(counting_slashes(mem, size_spec), sizeof(mystr));   //динам массив двух структур
 
@@ -31,7 +31,8 @@ int main()
 
     //осталось сделать функцию, принимающую index и сортирующую его
 
-    sorting_func(index, counting_slashes(mem, size_spec));
+sort_machine(index, counting_slashes(mem, size_spec));
+
     //printf("%d %d %d", 'a', 'A', 'z');
     return 0;
 }

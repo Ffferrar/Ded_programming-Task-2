@@ -1,27 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <BrowseTracker_layout_file>
 	<ActiveTarget name="Debug" />
-	<File name="parsing_strings.cpp" open="1" top="0" tabpos="3">
-		<Cursor position="229" topLine="0" />
-		<BrowseMarks positions="907" />
-		<Book_Marks positions="" />
+	<File name="sort_functions.h" open="1" top="0" tabpos="3">
+		<Cursor position="66" topLine="0" />
+		<BrowseMarks positions="106,218" />
 	</File>
-	<File name="sorting_func.cpp" open="1" top="1" tabpos="0">
-		<Cursor position="0" topLine="0" />
+	<File name="parsing_strings.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="142" topLine="0" />
+		<BrowseMarks positions="907" />
+	</File>
+	<File name="sorting_func.cpp" open="1" top="1" tabpos="4">
+		<Cursor position="551" topLine="0" />
+		<BrowseMarks positions="" />
+		<Book_Marks positions="585" />
 	</File>
 	<File name="counting_slashes.cpp" open="0" top="0" tabpos="2">
-		<Cursor position="296" topLine="0" />
-		<BrowseMarks positions="" />
-		<Book_Marks positions="" />
-	</File>
-	<File name="sort_functions.h" open="1" top="0" tabpos="4">
-		<Cursor position="162" topLine="0" />
-		<BrowseMarks positions="54,106" />
-		<Book_Marks positions="" />
+		<Cursor position="238" topLine="0" />
+		<BrowseMarks positions="211" />
 	</File>
 	<File name="main.cpp" open="1" top="0" tabpos="1">
-		<Cursor position="1655" topLine="3" />
-		<BrowseMarks positions="0,186,314,329,792,794,938,940,969,1014,1054,1209,1350,1354,1724,1766,1781,1784" />
+		<Cursor position="1784" topLine="0" />
+		<BrowseMarks positions="1660,1984" />
 		<Book_Marks positions="" />
 	</File>
 </BrowseTracker_layout_file>

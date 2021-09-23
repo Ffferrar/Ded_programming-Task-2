@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+//Ќ≈ќЅ’ќƒ»ћќ ƒќѕќЋЌя“№ ‘ј…Ћ ѕќ—Ћ≈ƒЌ»ћ —»ћ¬ќЋќћ /n BAGBAGBAG
 #include "sort_functions.h"
 int main()
 {
@@ -22,16 +22,17 @@ int main()
 
 
 
-    size_spec = fread(mem, sizeof(char), size_f-1, fp);    // кидает файл в буфер, получает количество символов
+    size_spec = fread(mem, sizeof(char), size_f, fp);    // кидает файл в буфер, получает количество символов
 
-    mystr* index = (mystr*)calloc(counting_slashes(mem, size_spec), sizeof(mystr));   //пока что одномерный массив указателей, надо сделать двумерным с длиной строки
+    mystr* index = (mystr*)calloc(counting_slashes(mem, size_spec), sizeof(mystr));   //динам массив двух структур
 
 
     file_strings(mem, size_spec, index);  //функци€ кладет в массив структур index указатель на начало строки и длину строки
 
     //осталось сделать функцию, принимающую index и сортирующую его
-
-
+    
+sort_machine(index, counting_slashes(mem, size_spec));
+   
     //printf("%d %d %d", 'a', 'A', 'z');
     return 0;
 }
