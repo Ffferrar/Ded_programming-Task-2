@@ -31,5 +31,7 @@ int main()
 
     //осталось сделать функцию, принимающую index и сортирующую его
 
+    sort_machine(index, counting_slashes(mem, size_spec));
+
     return 0;
 }
