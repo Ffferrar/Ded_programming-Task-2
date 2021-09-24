@@ -7,16 +7,16 @@
 1632239025 source:c:\users\trying python\desktop\ded proffesional programming\onegin_task\onegin_sort.cpp
 	<stdio.h>
 
-1632349867 c:\users\trying python\desktop\ded proffesional programming\onegin_task\sort_functions.h
+1632511999 c:\users\trying python\desktop\ded proffesional programming\onegin_task\sort_functions.h
 
 1632239025 source:c:\users\trying python\desktop\ded proffesional programming\onegin_task\counting_slashes.cpp
 	<stdio.h>
 
-1632262602 source:c:\users\trying python\desktop\ded proffesional programming\onegin_task\parsing_strings.cpp
+1632511999 source:c:\users\trying python\desktop\ded proffesional programming\onegin_task\parsing_strings.cpp
 	<stdio.h>
 	"sort_functions.h"
 
-1632411832 source:c:\users\trying python\desktop\ded proffesional programming\onegin_task\sorting_func.cpp
+1632511999 source:c:\users\trying python\desktop\ded proffesional programming\onegin_task\sorting_func.cpp
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

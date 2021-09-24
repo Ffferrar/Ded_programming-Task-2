@@ -31,7 +31,7 @@ int main()
 
     //осталось сделать функцию, принимающую index и сортирующую его
 
-sort_machine(index, counting_slashes(mem, size_spec));
+    sort_machine(index, counting_slashes(mem, size_spec));
 
     //printf("%d %d %d", 'a', 'A', 'z');
     return 0;
