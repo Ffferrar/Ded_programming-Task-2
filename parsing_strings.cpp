@@ -2,12 +2,12 @@
 // запихиваем буфер в массив указателей на строки
 #include "sort_functions.h"
 void file_strings(char* mem, int size_, mystr* index){
-    int cow=0;
-    int cursor=0;
-    int spec_counter=0; //счётчик для массива указателей index
+    int cow = 0;
+    int cursor = 0;
+    int spec_counter = 0; //счётчик для массива указателей index
                                                         //printf("%d - size_\n", size_);
     while (cow<size_){
-        if (cow == (size_ -1)){
+        if (cow == (size_ - 1)){
             index[spec_counter].str = &mem[cursor];
             index[spec_counter].length = cow - cursor;
         }                                                //printf("%c - mem[cow]\n", mem[cow]);
@@ -17,7 +17,7 @@ void file_strings(char* mem, int size_, mystr* index){
                                                         //printf("%d\n", spec_counter);
                                                         //printf("%d \n",index[spec_counter].str);
             spec_counter++;
-            cursor=cow+1;
+            cursor = cow+1;
         }
         cow++;
     }

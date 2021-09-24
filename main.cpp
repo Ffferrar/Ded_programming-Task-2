@@ -4,7 +4,7 @@
 #include "sort_functions.h"
 int main()
 {
-    int size_f = 0, size_spec=0; // размер файла в байтах, размер файла в байтах без \r
+    int size_f = 0, size_spec = 0; // размер файла в байтах, размер файла в байтах без \r
     FILE *fp;
     fp=fopen("onegin_test_text.txt", "r");  //открываем файл
 
@@ -25,12 +25,8 @@ int main()
     size_spec = fread(mem, sizeof(char), size_f-1, fp);    // кидает файл в буфер, получает количество символов
 
     mystr* index = (mystr*)calloc(counting_slashes(mem, size_spec), sizeof(mystr));   //пока что одномерный массив указателей, надо сделать двумерным с длиной строки
-    printf("%d\n", size_spec);
 
     file_strings(mem, size_spec, index);  //функция кладет в массив структур index указатель на начало строки и длину строки
-
-    //осталось сделать функцию, принимающую index и сортирующую его
-    //printf("%d %d %d\n", index[0].length, index[1].length, index[2].length);
 
     sort_machine(index, counting_slashes(mem, size_spec));
 
@@ -40,8 +36,12 @@ int main()
                         printf("%c", *spec);
                         spec++;
                     }
-                    printf("  %d", index[i].length);
                     printf("\n");
     }
+    fclose(fp);
+    FILE *f;
+    f=fopen("onegin_test_text.txt", "wb");
+    fwrite(index, sizeof(char), sizeof(mystr),f);
+    fclose(f);
     return 0;
 }
