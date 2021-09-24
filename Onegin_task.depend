@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1632416344 source:c:\users\trying python\desktop\ded proffesional programming\onegin_task\main.cpp
+1632503709 source:c:\users\trying python\desktop\ded proffesional programming\onegin_task\main.cpp
 	<stdio.h>
 	<stdlib.h>
 	"sort_functions.h"
@@ -12,11 +12,11 @@
 1632239025 source:c:\users\trying python\desktop\ded proffesional programming\onegin_task\counting_slashes.cpp
 	<stdio.h>
 
-1632415652 source:c:\users\trying python\desktop\ded proffesional programming\onegin_task\parsing_strings.cpp
+1632503227 source:c:\users\trying python\desktop\ded proffesional programming\onegin_task\parsing_strings.cpp
 	<stdio.h>
 	"sort_functions.h"
 
-1632416382 source:c:\users\trying python\desktop\ded proffesional programming\onegin_task\sorting_func.cpp
+1632503653 source:c:\users\trying python\desktop\ded proffesional programming\onegin_task\sorting_func.cpp
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

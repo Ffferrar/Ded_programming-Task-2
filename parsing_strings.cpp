@@ -7,7 +7,10 @@ void file_strings(char* mem, int size_, mystr* index){
     int spec_counter=0; //счётчик для массива указателей index
                                                         //printf("%d - size_\n", size_);
     while (cow<size_){
-                                                        //printf("%c - mem[cow]\n", mem[cow]);
+        if (cow == (size_ -1)){
+            index[spec_counter].str = &mem[cursor];
+            index[spec_counter].length = cow - cursor;
+        }                                                //printf("%c - mem[cow]\n", mem[cow]);
         if (mem[cow] == '\n'){
             index[spec_counter].str = &mem[cursor];     // заносим в index адрес. желательно сохранять и длину строки -> нужна структура
             index[spec_counter].length = cow - cursor;

@@ -25,13 +25,23 @@ int main()
     size_spec = fread(mem, sizeof(char), size_f-1, fp);    // кидает файл в буфер, получает количество символов
 
     mystr* index = (mystr*)calloc(counting_slashes(mem, size_spec), sizeof(mystr));   //пока что одномерный массив указателей, надо сделать двумерным с длиной строки
-
+    printf("%d\n", size_spec);
 
     file_strings(mem, size_spec, index);  //функция кладет в массив структур index указатель на начало строки и длину строки
 
     //осталось сделать функцию, принимающую index и сортирующую его
+    //printf("%d %d %d\n", index[0].length, index[1].length, index[2].length);
 
     sort_machine(index, counting_slashes(mem, size_spec));
 
+    for (int i=0;i<counting_slashes(mem, size_spec);i++){
+                    char* spec = index[i].str;
+                    for (int j=0;j<index[i].length;j++){
+                        printf("%c", *spec);
+                        spec++;
+                    }
+                    printf("  %d", index[i].length);
+                    printf("\n");
+    }
     return 0;
 }

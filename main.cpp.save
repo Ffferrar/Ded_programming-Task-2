@@ -30,7 +30,8 @@ int main()
     file_strings(mem, size_spec, index);  //функция кладет в массив структур index указатель на начало строки и длину строки
 
     //осталось сделать функцию, принимающую index и сортирующую его
-
+    //printf("%d %d %d\n", index[0].length, index[1].length, index[2].length);
+    
     sort_machine(index, counting_slashes(mem, size_spec));
 
     return 0;
