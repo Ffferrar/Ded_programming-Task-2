@@ -28,7 +28,8 @@ int main()
 
     file_strings(mem, size_spec, index);  //функция кладет в массив структур index указатель на начало строки и длину строки
     int number_slashes = counting_slashes(mem, size_spec);
-    sort_machine(index, number_slashes);
+
+    back_sort_machine(index, number_slashes);
     fclose(fp);
 
     FILE *f;

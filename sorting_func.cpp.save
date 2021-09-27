@@ -13,7 +13,7 @@ int otrezok (char letter, int x1, int x2){       //функция принадлежности отрезк
     }
 }
 
-
+ //компаратор 
 int compare(const void* x1, const void* x2){
     mystr a1 = *(mystr *) (x1);
     mystr a2 = *(mystr *) (x2);
@@ -41,19 +41,17 @@ int compare(const void* x1, const void* x2){
         }
 
         else if (otrezok(*a2_str, 91, 96) || otrezok(*a2_str, 33, 64) || otrezok(*a2_str, 123, 126)){                 //проверяем на знаки пунктуации
-            if ( not otrezok(*a1_str, 91, 96) || otrezok(*a1_str, 33, 64) || otrezok(*a1_str, 123, 126)){
+            if (not otrezok(*a1_str, 91, 96) || otrezok(*a1_str, 33, 64) || otrezok(*a1_str, 123, 126)){
                 return 1;
             }
             else { continue; }
         }
 
         else if (*a1_str < *a2_str){
-            //printf("1, *a1<a2 %c \n", *a1_str);
             return -1;
         }
 
         else if (*a1_str > *a2_str){
-            //printf("1, *a1>a2\n");
             return 1;
         }
 
@@ -76,39 +74,7 @@ int compare(const void* x1, const void* x2){
     }
 }
 
-
+//функция вызывает сортировку
 void sort_machine(mystr* index, int strings_sum){
         qsort(index, strings_sum, sizeof(mystr), compare);
 }
-
-/*void sorting_func (mystr* index, int strings_sum){
-    int cow=1;
-
-    while (cow<(strings_sum-1)){
-        if (*index[cow-1].str >= *index[cow].str){
-            char* midnight = index[cow-1].str;
-            int midnight_len = index[cow-1].length;
-
-            index[cow-1].str = index[cow].str;
-            index[cow].str = midnight;
-
-            index[cow-1].length = index[cow].length;
-            index[cow].length = midnight_len;
-        }
-
-        cow++;
-    }
-
-
-    for (int i=0;i<strings_sum;i++){
-        char* spec = index[i].str;
-        for (int j=0;j<index[i].length;j++){
-            printf("%c", *spec);
-            spec++;
-        }
-        printf("\n");
-    }
-
-}
-
- */

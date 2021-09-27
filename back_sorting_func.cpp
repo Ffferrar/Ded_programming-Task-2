@@ -1,28 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-// сортируем строки по алфавиту
+// сортируем строки по алфавиту в обратном порядке
 #include "sort_functions.h"
 
-int otrezok (char letter, int x1, int x2){       //функция принадлежности отрезку
-    if ((letter <= x2) && (letter >= x1)){
-        return 1;
-    }
-    else{
-        return 0;
-    }
-}
-
- //компаратор
-int compare(const void* x1, const void* x2){
+int back_compare(const void* x1, const void* x2){
     mystr a1 = *(mystr *) (x1);
     mystr a2 = *(mystr *) (x2);
 
     int length1 = a1.length;
     int length2 = a2.length;
-    char *a1_str = a1.str;
-    char *a2_str = a2.str;
-
+    char *a1_str = a1.str + length1;
+    char *a2_str = a2.str + length2;
     for (int i = 0; i < length1; i++){
 
         if (otrezok(*a1_str, 65, 90)){      //проверяем на заглавные
@@ -56,8 +45,8 @@ int compare(const void* x1, const void* x2){
         }
 
         else if (*a1_str == *a2_str){
-            a1_str++;
-            a2_str++;
+            a1_str--;
+            a2_str--;
             if ((i == (length1 - 1)) && ( (length1 - 1) == (length2 - 1) )){
                 return 0;
             }
@@ -74,7 +63,7 @@ int compare(const void* x1, const void* x2){
     }
 }
 
-//функция вызывает сортировку
-void sort_machine(mystr* index, int strings_sum){
-        qsort(index, strings_sum, sizeof(mystr), compare);
+
+void back_sort_machine (mystr* index, int strings_sum){
+        qsort(index, strings_sum, sizeof(mystr), back_compare);
 }
