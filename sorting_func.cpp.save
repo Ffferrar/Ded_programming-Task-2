@@ -4,6 +4,15 @@
 // сортируем строки по алфавиту
 #include "sort_functions.h"
 
+/**
+    @brief Function Otrezok shows belonging to the segment of two symbols
+    @param [in] letter symbol
+    @param [in] x1 first part of segment
+    @param [in] x2 second part of segment
+    
+    @return true or false
+*/
+
 int otrezok (char letter, int x1, int x2){       //функция принадлежности отрезку
     if ((letter <= x2) && (letter >= x1)){
         return 1;
@@ -13,7 +22,10 @@ int otrezok (char letter, int x1, int x2){       //функция принадлежности отрезк
     }
 }
 
- //компаратор 
+ /**
+    @brief Comparator for straight sorting function
+*/
+
 int compare(const void* x1, const void* x2){
     mystr a1 = *(mystr *) (x1);
     mystr a2 = *(mystr *) (x2);
@@ -74,7 +86,9 @@ int compare(const void* x1, const void* x2){
     }
 }
 
-//функция вызывает сортировку
+/**
+    @brief 
+*/
 void sort_machine(mystr* index, int strings_sum){
         qsort(index, strings_sum, sizeof(mystr), compare);
 }

@@ -1,10 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 #include "sort_functions.h"
+
+/** Strings' sorting program
+    @version Vers 2.0
+    @date 27.09.2021
+    @brief Solving task #2 for the course "Professional Programming"
+    @brief Realized straight and back sorting functions of txt files
+*/
+
 int main()
 {
     int size_f = 0, size_spec = 0; // размер файла в байтах, размер файла в байтах без \r
+    printf("\tKozhanov Gleb, B05-120\nThe sorter of txt files\n\n");
+    printf("Please, put your data by the path\n\n <C:\\Users\\Trying Python\\Desktop\\Ded Proffesional programming\\Onegin_task\\onegin_test_text.txt>\n\nResult you can see in the same folder, file <onegin_writing.txt>");
     FILE *fp;
     fp=fopen("onegin_test_text.txt", "r");  //открываем файл
 
@@ -38,7 +47,6 @@ int main()
                     char* spec = index[i].str;
                     for (int j=0;j<index[i].length;j++){
                         fwrite(spec, sizeof(char), 1, f);
-                        //printf("%c", *spec);
                         spec++;
                     }
                     fwrite(&("\n"), sizeof(char), 1, f);

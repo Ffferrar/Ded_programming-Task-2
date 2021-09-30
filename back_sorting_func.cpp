@@ -3,7 +3,9 @@
 #include <string.h>
 // сортируем строки по алфавиту в обратном пор€дке
 #include "sort_functions.h"
-
+/**
+    @brief Comparator for back sorting function
+*/
 int back_compare(const void* x1, const void* x2){
     mystr a1 = *(mystr *) (x1);
     mystr a2 = *(mystr *) (x2);

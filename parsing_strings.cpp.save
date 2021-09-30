@@ -1,6 +1,14 @@
 #include <stdio.h>
 // запихиваем буфер в массив указателей на строки
 #include "sort_functions.h"
+
+/** @brief Function creates an array of structures
+    @brief Structure mystr has two types: char* and int 
+    
+    @param [in] mem buffer with file's content
+    @param [in] size_ number of characters in the file
+    @param [out] index array of structures
+*/
 void file_strings(char* mem, int size_, mystr* index){
     int cow = 0;
     int cursor = 0;
