@@ -35,54 +35,35 @@ int compare(const void* x1, const void* x2){
     char *a1_str = a1.str;
     char *a2_str = a2.str;
 
+    int tolower1 = *a1_str;       //третья переменная для сохранения регистра в тексте
+    int tolower2 = *a2_str;
+
     for (int i = 0; i < length1; i++){
 
         if (otrezok(*a1_str, 65, 90)){      //проверяем на заглавные
-            *a1_str += 32;
+            tolower1 += 32;                  // ToDo: lower, tolower???, DON'T CHANGE ORIGINAL TEXT! ANDREY_-_DONE
         }
 
         if (otrezok(*a2_str, 65, 90)){
-            *a2_str += 32;
+            tolower2 += 32;
         }
 
         if (otrezok(*a1_str, 91, 96) || otrezok(*a1_str, 33, 64) || otrezok(*a1_str, 123, 126)){                 //проверяем на знаки пунктуации
-            if ( not otrezok(*a2_str, 91, 96) || otrezok(*a2_str, 33, 64) || otrezok(*a2_str, 123, 126)){
+            if ( ! otrezok(*a2_str, 91, 96) || otrezok(*a2_str, 33, 64) || otrezok(*a2_str, 123, 126)){  // ToDo: ! ANDREY_-_DONE
                 return 1;
             }
             else { continue; }
         }
 
-        else if (otrezok(*a2_str, 91, 96) || otrezok(*a2_str, 33, 64) || otrezok(*a2_str, 123, 126)){                 //проверяем на знаки пунктуации
-            if (not otrezok(*a1_str, 91, 96) || otrezok(*a1_str, 33, 64) || otrezok(*a1_str, 123, 126)){
+        else if (otrezok(*a2_str, 91, 96) || otrezok(*a2_str, 33, 64) || otrezok(*a2_str, 123, 126)){            //проверяем на знаки пунктуации
+            if (! otrezok(*a1_str, 91, 96) || otrezok(*a1_str, 33, 64) || otrezok(*a1_str, 123, 126)){
                 return 1;
             }
             else { continue; }
         }
 
-        else if (*a1_str < *a2_str){
-            return -1;
-        }
-
-        else if (*a1_str > *a2_str){
-            return 1;
-        }
-
-        else if (*a1_str == *a2_str){
-            a1_str++;
-            a2_str++;
-            if ((i == (length1 - 1)) && ( (length1 - 1) == (length2 - 1) )){
-                return 0;
-            }
-            if (i == (length1 - 1)){
-                return -1;
-            }
-
-            if (i == (length2 - 1)){
-                return 1;
-            }
-
-            continue;
-        }
+        // ToDo: Next code: a1 - a2 ANDREY_-_DONE
+        else {return (tolower1 - tolower2);}
     }
 }
 

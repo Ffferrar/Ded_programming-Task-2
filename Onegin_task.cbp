@@ -34,6 +34,7 @@
 		</Compiler>
 		<Unit filename="back_sorting_func.cpp" />
 		<Unit filename="counting_slashes.cpp" />
+		<Unit filename="file_size.cpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="parsing_strings.cpp" />
 		<Unit filename="sort_functions.h" />

@@ -14,14 +14,20 @@ int back_compare(const void* x1, const void* x2){
     int length2 = a2.length;
     char *a1_str = a1.str + length1;
     char *a2_str = a2.str + length2;
+
+    int tolower1 = *a1_str;       //третья переменная для сохранения регистра в тексте
+    int tolower2 = *a2_str;
+
     for (int i = 0; i < length1; i++){
+        int tolower1 = *a1_str;       //третья переменная для сохранения регистра в тексте
+        int tolower2 = *a2_str;
 
         if (otrezok(*a1_str, 65, 90)){      //проверяем на заглавные
-            *a1_str += 32;
+            tolower1 += 32;
         }
 
         if (otrezok(*a2_str, 65, 90)){
-            *a2_str += 32;
+            tolower2 += 32;
         }
 
         if (otrezok(*a1_str, 91, 96) || otrezok(*a1_str, 33, 64) || otrezok(*a1_str, 123, 126)){                 //проверяем на знаки пунктуации
@@ -38,15 +44,15 @@ int back_compare(const void* x1, const void* x2){
             else { continue; }
         }
 
-        else if (*a1_str < *a2_str){
+        else if (tolower1 < tolower2){
             return -1;
         }
 
-        else if (*a1_str > *a2_str){
+        else if (tolower1 > tolower2){
             return 1;
         }
 
-        else if (*a1_str == *a2_str){
+        else if (tolower1 == tolower2){
             a1_str--;
             a2_str--;
             if ((i == (length1 - 1)) && ( (length1 - 1) == (length2 - 1) )){
